@@ -31,7 +31,7 @@ INSERT INTO Loanss VALUES (103, 3, 11.0, SYSDATE + 5);
 INSERT INTO Loanss VALUES (104, 4, 8.5, SYSDATE + 60);  
 INSERT INTO Loanss VALUES (105, 5, 10.5, SYSDATE + 25); 
 
-scenario 1
+-- scenario 1
 
 BEGIN
     FOR cust IN (

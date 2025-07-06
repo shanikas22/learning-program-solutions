@@ -39,14 +39,15 @@ public class MyServiceTest {
     public void testVerifyInteraction() {
         // Step 1: Create mock
         ExternalApi mockApi = Mockito.mock(ExternalApi.class);
-
+        
+        when(mockApi.getData()).thenReturn("Mock Data");
         // Step 2: Inject into service and call method
         MyService service = new MyService(mockApi);
         service.fetchData();
 
         // Step 3: Verify that getData() was called
         verify(mockApi).getData();  // ✅ Test will fail if this wasn't called
-        when(mockApi.getData()).thenReturn("Mock Data");
+        
         System.out.println("👉 Mock used: " + mockApi);
         System.out.println("🧪 fetchData() result: " + service.fetchData());
 

@@ -30,13 +30,17 @@ public class CalculatorTest {
     @AfterEach
     void tearDown() {
         // Cleanup logic (if needed)
+        num1=0;
+        num2=0;
+        
         System.out.println("Test completed.\n");
     }
 
     @Test
     void testAddition() {
+        
         // ✅ Act
-        int result = calculator.add(2, 3);
+        int result = calculator.add(num1, num2);
 
         // ✅ Assert
         assertEquals(5, result, "Addition should return 5");
